@@ -28,8 +28,15 @@ const config = {
   },
   devServer: {
     contentBase: '.',
+    open: 'Google Chrome',
+    host: '192.168.1.3',
   },
   plugins,
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    }
+  }
 }
 
 module.exports = config

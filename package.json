@@ -5,10 +5,11 @@
   "author": "@jonalvarezz",
   "main": "serve.js",
   "scripts": {
-    "start": "npm run serve",
+    "start": "npm run dev",
     "dev": "concurrently \"webpack -w\" \"micro-dev\"",
     "export": "node export.js",
     "build": "webpack -p && node export",
+    "analyze": "webpack -p --analyze",
     "serve": "serve .",
     "pre-commit": "pretty-quick --staged",
     "prepare": "husky install"
@@ -37,7 +38,8 @@
     "style-loader": "^2.0.0",
     "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^4.4.2",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.1.0"
